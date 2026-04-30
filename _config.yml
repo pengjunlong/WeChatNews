@@ -1,7 +1,7 @@
 # Site
-title: 每日新闻摘要
-baseurl: "/news-digest"
-description: "每日新闻联播摘要自动聚合"
+title: 微信热文精选
+baseurl: "/WeChatNews"
+description: "每日微信公众号热文自动聚合，按关键词分类整理"
 include:
   - _data
   - subsite-config.json
@@ -14,7 +14,7 @@ search: true
 
 # Permalink & pagination
 permalink: /:year/:month/:day/:title/
-paginate: 5
+paginate: 10
 paginate_path: /page:num/
 
 # TOC
@@ -35,7 +35,7 @@ plugins:
 author:
   name: "Junlong Peng"
   avatar: "https://avatars.githubusercontent.com/u/1436509?v=4"
-  bio: "News is what people want to know..."
+  bio: "每日精选微信公众号热文，按关键词聚合"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"

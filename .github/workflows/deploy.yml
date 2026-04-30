@@ -1,9 +1,9 @@
-name: news_crawler
+name: wechat_crawler
 
 on:
   schedule:
-    # 北京时间 21:00 和 7:00 (UTC 13:00 / 23:00)
-    - cron: '0 13,23 * * *'
+    # 北京时间每天 8:00 运行 (UTC 0:00)
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -24,13 +24,13 @@ jobs:
       - name: Install dependencies
         run: pip install aiohttp beautifulsoup4 lxml
 
-      - name: Run News Crawler
-        run: python scripts/news_crawler.py 2
+      - name: Run Keyword Crawler
+        run: python scripts/wechat_crawler.py
 
       - name: Commit & Push
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add _posts/
-          git diff --cached --quiet || git commit -m "Auto Update: News posts $(date +%Y-%m-%d)"
+          git diff --cached --quiet || git commit -m "Auto Update: WeChat digest $(date +%Y-%m-%d)"
           git push

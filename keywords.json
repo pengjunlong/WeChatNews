@@ -1,0 +1,13 @@
+{
+  "keywords": [
+    "人工智能",
+    "大模型",
+    "科技创业",
+    "经济政策",
+    "国际局势"
+  ],
+  "articles_per_keyword": 5,
+  "request_delay": [1.5, 3.5],
+  "deduplicate": true
+}
+
